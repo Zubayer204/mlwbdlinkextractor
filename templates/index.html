@@ -2,11 +2,157 @@
 <html>
 <head>
 	<title>MLWBD Movie Link Extractor</title>
-	<meta name="google-site-verification" content="s9k7wYBCN5_udWa2rERRVnBqHF2Hyi7Z5P81rNNYhtc" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="content" value="Movie, movie, movei, MLWBD, mlwbd, mlwbdlinkextractor, mlwbdlink">
+	<meta name="author" value="Zubayer Rahman">
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+	<style>
+
+		html,
+		body {
+		   margin:0;
+		   padding:0;
+		   height:100%;
+		}
+
+		/*footer {
+		   position:absolute;
+		   bottom:0;
+		   width:100%;
+		}*/
+
+		iframe {
+			width: 100%;
+			height: 100vh;
+		}
+
+		#img {
+			margin: 0 auto;
+			width: 20em;
+		}
+
+		.container.py-24{
+			padding-top: 1rem;
+		}
+
+		.custom{
+			color: red;
+			padding-bottom: 1rem;
+		}
+
+	</style>
 </head>
 <body>
 
-<h1>Welcome to MLWBD Link Extrator</h1>
+	<header class="text-gray-600 body-font">
+	  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+	    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+	      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+	        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+	      </svg>
+	      <span class="ml-3 text-xl">Zubayer</span>
+	    </a>
+	    <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+	      <a href="https://www.facebook.com/zubayer.rahman.39589/" class="text-gray-500">
+	        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+	          <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+	        </svg>
+	      </a>
+	      <a href="https://www.instagram.com/zubayer204/" class="ml-3 text-gray-500">
+	        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+	          <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+	          <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+	        </svg>
+	      </a>
+	      <a href="https://www.linkedin.com/in/zubayer-rahman-8793041ba/" class="ml-3 text-gray-500">
+	        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+	          <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+	          <circle cx="4" cy="4" r="2" stroke="none"></circle>
+	        </svg>
+	      </a>
+	    </nav>
+	    <button onclick="location.href='https://github.com/Zubayer204/mlwbdlinkextractor';" class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">View Code On Github
+	      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+	        <path d="M5 12h14M12 5l7 7-7 7"></path>
+	      </svg>
+	    </button>
+	  </div>
+	</header>
+
+	<section class="text-gray-600 body-font">
+	  <div class="container px-5 py-24 mx-auto">
+	    <div class="flex flex-col text-center w-full mb-12">
+	      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">MLWBD Link Extrator</h1>
+	      <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Are you bored in just clicking and navigating to websites for just getting a movie link? Bruh! This is the right place for you. Just copy and paste the mlwbd movie link (shown in the image) and it'll suck out the movie download link from it!</p>
+	    </div>
+	    <form method="POST">
+		    <div class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:space-y-0 space-y-4 sm:px-0 items-end">
+		      <div class="relative flex-grow w-full">
+		        <label for="full-name" class="leading-7 text-sm text-gray-600">MLWBD Movie Url</label>
+		        <input type="text" id="full-name" name="url" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" placeholder="https://mlwbd.mobi/movie/chakra-2021/">
+		      </div>
+		      <button type="submit" class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">SUCK!</button>
+		    </div>
+	    </form>
+	  </div>
+	</section>
+
+	{%if show_tutorial==True%}
+	<img id="img" src="../static/images/ss.webp">
+
+
+	{%else%}
+	{%if download_link != "Nan"%}
+	<iframe onload="scroll_iframe()" id="iframe" src={{ download_link }}></iframe>
+	{%else%}
+	<p class="custom text-center lg:w-2/3 mx-auto leading-relaxed text-base">Please Enter An Valid MLWBD Url</p>
+	<img id="img" src="../static/images/ss.webp">
+	{%endif%}
+
+	{%endif%}
+
+
+	<footer class="text-gray-600 body-font">
+	  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+	    <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+	      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+	        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+	      </svg>
+	      <span class="ml-3 text-xl">Zubacorp</span>
+	    </a>
+	    <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2021 Zubacorp —
+	      <a href="https://twitter.com/knyttneve" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@Zubayer</a>
+	    </p>
+	    <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+	      <a href="https://www.facebook.com/zubayer.rahman.39589/" class="text-gray-500">
+	        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+	          <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+	        </svg>
+	      </a>
+	      <a href="https://www.instagram.com/zubayer204/" class="ml-3 text-gray-500">
+	        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+	          <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+	          <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+	        </svg>
+	      </a>
+	      <a href="https://www.linkedin.com/in/zubayer-rahman-8793041ba/" class="ml-3 text-gray-500">
+	        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+	          <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+	          <circle cx="4" cy="4" r="2" stroke="none"></circle>
+	        </svg>
+	      </a>
+	    </span>
+	  </div>
+	</footer>
+
+	<script>
+		function scroll_iframe() {
+			let iframe = document.getElementById("iframe");
+			iframe.scrollIntoView({ behavior: 'smooth' });
+		}
+	</script>
 
 </body>
 </html>
